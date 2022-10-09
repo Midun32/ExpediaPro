@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="style1.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="style2.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="style3.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="style4.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+
+<body>
+  <!--Hello world-->
+  <script src="script.js"></script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+<header aria-label="header" class="is-loggedin">
+  <div class="container">
+      <div class="row">
+          
+              <div class="span12 hidden-phone">
+<ul id="utilityNav" class="menu-utility">
+  <li id="utilityHome" class="menu-item-utility hidden-phone">
+            <a href="/homePage.do" id="utilityHomeLink" onclick="deleteVirtualPNR()">Home</a>
+        </li>
+            <li id="aa-meta-login" class="menu-item-utility hidden-phone">
+                <a href="javascript:deleteVPNRModal();" id="loginLogoutLink" class="hidden-phone">Log in</a>
+            </li>
+        <li id="utilityCustomerInfo" class="menu-item-utility customer-info hidden-phone" data-behavior="dropdown">
+  <div id="language-selector" data-behavior="dropdown-wrapper">
+    <a href="#" data-behavior="dropdown-trigger">
+    	<span class="aa-language-select-indicator">
+    		<img alt="United States" src="/content/images/chrome/rebrand/aa-icons-flags-sprite.png">
+    	</span>
+    	English
+    	<img alt="Click to change language and/or country / region" src="/content/images/chrome/rebrand/down-arrow.png" class="dropdown-indicator"/>
+    </a>
+</div>
+<div data-behavior="dropdown-panel" style="display:none;">
+	<form id="splashForm" method="post" action="/international/mclaSplashSubmit.do">
+        <label for="aa-country-selector">
+            Select Country / Region
+            
+            <select name="countryselector" size="1" id="aa-country-selector">         
+					<option value="en_AI"  >
+                        Anguilla
+                  	</option>          
+					<option value="en_AG"  >
+                        Antigua And Barbuda
+                  	</option>         
+					<option value="es_AR"  >
+                        Argentina
+                  	</option>          
+					<option value="en_AW"  >
+                        Aruba
+                  	</option>          
+					<option value="en_AU"  >
+                        Australia
+                  	</option>          
+					<option value="en_BS"  >
+                        Bahamas
+                  	</option>          
+					<option value="en_BB"  >
+                        Barbados
+                  	</option>          
+					<option value="en_BE"  >
+                        Belgium
+                  	</option>    
+					<option value="en_BZ"  >
+                        Belize
+                  	</option>
+              </select>
+        </label>
+    <label for="aa-language-selector">
+			Select Language
+                 
+			<select name="languageselector" size="1" id="aa-language-selector">          
+					<option value="url=https://www.aa.com?locale=en_US" selected="selected" >English</option>
+   <option value="url=https://www.aa.com/es_US?locale=es_US"  >Español</option>
+                
+            </select>
+        </label>
+        
+            <div class="customComponent">
+            	<input type="checkbox" name="localePreferenceSaved" value="on" id="aa-country-language-save" />
+			    <label for="aa-country-language-save">
+			        <span class="control"></span>
+			        Remember this selection?
+			    </label>
+			</div>
+        
+
+        <div id="locale-change-alert" class="alert alert-small alert-success" style="display: none">
+			<p><span class="aa-icon-alert-sm" aria-hidden="true"></span>
+        	We'll redirect you to the home page of the country / region site you choose.</p>
+		</div>
+
+        <input type="submit" class="btn btn-fullWidth" data-behavior="deleteVPNR" id="aa-choose-locale"
+               value="Select" onclick="deleteBackCall();"/>
+
+        <input type="hidden" name="selectedCountry" value="" id="splashSelectedCountry" />
+        <input type="hidden" name="anchorLocation" value="WorldWide_Sites" id="splashAnchorLocation" />
+        <input type="hidden" name="url" value="" id="splashUrl" />
+        <input type="hidden" name="_locale" value="en_US" id="currentLocale" />
+        <input type="hidden" name="georedirect_param" value="" id="splashGeoRedirect" />
+        <input type="hidden" id="cancel" name="cancel"  value="yes"/>
+            <input type="hidden" name="bookingPathStateId" value="1665288448054-661" id="bookingPathStateId" />
+	</form>
+</div>
+
+  <li id="aa-site-search" class="menu-item-utility  hidden-phone">
+            <form id="utilitySearchForm">
+                <label for="aa-search-field">
+                    <span class="hidden-accessible">Search AA.com®</span>
+                    <input id="aa-search-field" type="search" name="q" maxlength="1000" placeholder="Search AA.com®" />
+                </label>
+                <button type="submit" id="aa-search-button" class="btn-search widget" value="Go" >
+                    <span class="icon icon-18 icon-search" aria-hidden="true"></span>
+                    <span class="hidden-accessible">Submit search</span>
+                </button>
+            </form>
+        </li></ul></div></div></div>
+</header>
+  <div id="main-navigation" class="row-noBreak pageslide-row" tabindex="-1">
+            <div class="hidden-phone">
+                
+                    
+                        <a class="aa-logo span4 span-phone9" href="/homePage.do" onclick="deleteVirtualPNR()">
+                            <img src="aa-logo.png" alt="American Airlines - homepage">
+                        </a>  
+            </div>
+                    <a class="aa-logo mobile-logo is-hidden visible-phone" href="/homePage.do" onclick="deleteVirtualPNR()">
+                        <img src="/content/images/chrome/rebrand/aa-logo.png" alt=" American Airlines - homepage ">
+                    </a>
+            <div class="mobile-nav is-hidden visible-phone">
+                <div class="utility-nav"><a href="javascript:deleteVPNRModal();" id="loginLogoutLink-phone" class="login-button">Log in</a> <div>
+                        <a href="#navigation" class="pageslide-button" data-position="right">
+                            <span class="icon-menu icon-large" aria-hidden="true"></span>
+                            <span class="hidden-accessible">
+                                Menu link
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div></div>
+
+  <div id="chooseFlightsHeader">
+	<h1 id="aa-pageTitle">
+		Choose flights
+	</h1>
+</div>
+
+  <div id="backNavigation">
+<p class="margin-bottom"><a id="newSearchLink" href="/booking/find-flights/newsearch?bookingPathStateId=1665288448054-661" class="hide-in-app">&#171; <span class="hidden-accessible">start a </span>New search</a></p>
+</div>
+
+<section id="globalMessageRenderer">
+<div id="globalMessages" aria-hidden="true">
+  <h2 class="no-margin display-inline ">
+    <div class="aaGreen display-inline">
+      Depart
+    </div> <span class="hidden-phone">Dallas/ Fort Worth, TX</span><span class="visible-phone">DFW</span> to <span class="hidden-phone">Philadelphia, PA</span><span class="visible-phone">PHL</span>
+</h2>
+  <h3>Monday, October 10, 2022
+        </h3></div></section>
+
+  <div class="flightsBiasedMessage">
+   <p class="message-inline-info">American Airlines flights may be listed first.</p>
+  </div>
+	<div class="row-space">
+			<div class="span3">
+			
+<ul id="fareFilter" class="fare-filter ">
+	<li>
+		<a id="fareCategory_lowest" class="lowest-fare selectedfilter" href="#" data-bookingpathid="1665288448054-661" data-currentslicenumber="1" data-farefilter="lowest">
+			<span class="hidden-accessible show-text">Show</span>
+			Lowest Fare
+		</a>
+	</li>
+	<li>
+		<a id="fareCategory_refundable"  class="refundable-fare " href="#" data-bookingpathid="1665288448054-661" data-currentslicenumber="1" data-farefilter="refundable">
+			<span class="hidden-accessible show-text">Show</span>
+			Flexible
+			<span class="hidden-accessible">fares only</span>
+		</a>
+	</li>
+</ul>
+			</div>
+    <div class="span9 padding-top margin-top">
+			
+
+
+
+
+
+
+<input type="hidden" class="js-trip-type" data-triptype="oneWay" />
+
+	<div id="datesCarousel" data-tripmode="Departure" data-currentsliceindex="1" class="flexslider-container">
+		<div class="flexslider is-hidden">
+			<ul class="slides">
+					<li class="flex-disabled-slide" data-displaydate="Oct 04">
+						<button type="button" id="date_Oct-04" tabindex="" disabled='disabled'>
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Tue, Oct 04<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        		Tuesday, October 4, 2022
+		                      </span>
+							<span class="flex-price-container">
+                	--
+							</span>
+							<span class="hidden-accessible js-unavailable-text">Not available</span>
+						</button>
+					</li>
+        <li class="flex-disabled-slide" data-displaydate="Oct 05">
+						<button type="button" id="date_Oct-05" tabindex="" disabled='disabled'>
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Wed, Oct 05<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        	
+	                        		Wednesday, 
+		                        	October 5, 2022
+		                        
+	                        </span>
+							<span class="flex-price-container">
+								
+									
+										
+										--
+									
+								
+							</span>
+							<span class="hidden-accessible js-unavailable-text">Not available</span>
+						</button>
+        </li>
+					<li class="flex-disabled-slide" data-displaydate="Oct 06">
+						<button type="button" id="date_Oct-06" tabindex="" disabled='disabled'>
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Thu, Oct 06<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        		Thursday, 
+		                        	October 6, 2022
+		                        
+	                        </span>
+							<span class="flex-price-container">	
+										--
+							</span>
+							<span class="hidden-accessible js-unavailable-text">Not available</span>
+						</button>
+					</li>
+					<li class="flex-disabled-slide" data-displaydate="Oct 07">
+						<button type="button" id="date_Oct-07" tabindex="" disabled='disabled'>
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Fri, Oct 07<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        		Friday, 
+		                        	October 7, 2022
+	                        </span>
+							<span class="flex-price-container">								
+										--
+							</span>
+							<span class="hidden-accessible js-unavailable-text">Not available</span>
+						</button>
+					</li>
+					<li class="flex-disabled-slide" data-displaydate="Oct 08">
+						<button type="button" id="date_Oct-08" tabindex="" disabled='disabled'>
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Sat, Oct 08<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        	
+	                        		Saturday, 
+		                        	October 8, 2022
+		                        
+	                        </span>
+							<span class="flex-price-container">
+										--
+							</span>
+							<span class="hidden-accessible js-unavailable-text">Not available</span>
+						</button>
+					</li>
+					<li class="" data-displaydate="Oct 09">
+						<button type="button" id="date_Oct-09" tabindex="" >
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Sun, Oct 09<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        		Sunday, 
+		                        	October 9, 2022 
+	                        </span>
+							<span class="flex-price-container">
+												<sup class="symbol">
+													&#x24;
+												</sup>
+											
+											<span class="price">
+												317
+											</span>	
+							</span>
+							<span class="hidden-accessible js-unavailable-text"></span>
+						</button>
+					</li>
+					<li class="" data-displaydate="Oct 10">
+						<button type="button" id="date_Oct-10" tabindex="" >
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Mon, Oct 10<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        	
+	                        		Monday, 
+	                        	
+	                        	
+		                        	October 10, 2022
+		                        
+	                        </span>
+							<span class="flex-price-container">
+												<sup class="symbol">
+													&#x24;
+												</sup>
+											
+											<span class="price">
+												339
+											</span>	
+							</span>
+							<span class="hidden-accessible js-unavailable-text"></span>
+						</button>
+					</li>
+					<li class="" data-displaydate="Oct 11">
+						<button type="button" id="date_Oct-11" tabindex="" >
+						    <span class="hidden-accessible js-currently-selected-text"></span>
+							Tue, Oct 11<br>
+	                        <span class="is-hidden fullDisplayDate">
+	                        	
+	                        		Tuesday, 
+	                        	
+	                        	
+		                        	October 11, 2022
+		                        
+	                        </span>
+							<span class="flex-price-container">
+												<sup class="symbol">
+													&#x24;
+												</sup>
+											
+											<span class="price">
+												309
+											</span>
+							</span>
+							<span class="hidden-accessible js-unavailable-text"></span>
+						</button>
+					</li></ul></div></div></div></div>
+        <div id="flightResultsContainer" data-tripmode="Departure">
+    <input id="utagDateChanger" type="hidden" value='{
+			ticket_type : "T",
+			search_departure_date : "10/10/2022",
+			lowest_ita_base_fare_price : "339.00",
+			adult_passengers : "1",
+			channel : "Booking",
+			loyalty_id : "B66XA74",
+			site_currency : "USD",
+			loyalty_balance : "0",
+			search_return_date : "10/10/2022",
+			search_product : "Flight",
+			products_offered_lowestprice : ["339.00", "754.00"],
+			site_country : "US",
+			route_type : "D",
+			page_name : "Choose Flights",
+			search_carrier_options : "American Airlines",
+			search_destination_city : "PHL",
+			search_advanced_days : "2",
+			tealium_environment : "prod",
+			search_method : "Lowest Fare",
+			login_status : "Soft_Login",
+			app_build_version : "1348",
+			trueclient_ip : "172.108.158.20",
+			slice_date : "10/10/2022",
+			destination_country : "US",
+			lowest_selling_fare_price : "339.00",
+			true_ond : "DFW-PHL",
+			search_origin_city : "DFW",
+			loyalty_tier : "Regular",
+			matrix_fare_types : ["MainCabin", "First"],
+			origin_state : "TX",
+			trip_type : "O",
+			app_region : "US:WDC",
+			current_slice : "1",
+			search_trip_duration : "OW",
+			search_cabin_type : "Show All",
+			site_language : "EN",
+			selling_fare_price_available : "Yes",
+			lowest_selling_fare_type : "MainCabin",
+			destination_state : "PA",
+			products_offered : ["C", "F"],
+			time_stamp : "10/08/2022 23:09:56",
+			tealium_profile : "main",
+			slice_ond : "DFW-PHL",
+			origin_country : "US",
+			temp_val_sc : "USD",
+			app_name : "aa.com",
+			ita_query_result_id : "zkjsgRMODPfmba1ju0cSld",
+			search_number_of_slices : "1",
+			site_indicator : "AAcom"
+}' />
+
+  <div class="column-headers affix pin">
+	<div class="row">
+		<div class="span6">
+			<label class="chooseflights-sort">Sort by:
+				<select id="searchResultsSortOptions" class="sortitems js-sortoptions">
+				  <option value="relevance">Relevance</option>
+				  <option value="stops">Number of stops</option>
+				  <option value="price">Price (low to high)</option>
+				  <option value="departearlytolate">Departure (early to late)</option>
+				  <option value="departlatetoearly">Departure (late to early)</option>
+				  <option value="arriveearlytolate">Arrival (early to late)</option>
+				  <option value="arrivelatetoearly">Arrival (late to early)</option>
+				  <option value="time">Total travel time</option>
+				  <option value="nonstopsduration">Nonstops-Duration</option>
+				</select>
+			</label>
+		</div>
+		<div class="span6">
+			<div class="row toolTiprow">
+				
+<!-- 					<div class="span6 text-center fare-header -MainCabin ">
+
+						<button type="button" class="delta text-underline cabin-MainCabin"
+						    id="MainCabinToolTipVisible"
+						    data-behavior="tooltip" data-tooltip-htmlref="#MainCabinDepartureToolTip"
+						    aria-haspopup="dialog" aria-controls="MainCabinDepartureToolTip">
+							Main Cabin
+							
+							<span class="hidden-accessible">
+								Opens Main Cabin description pop-up
+							</span>
+						</button>
+					</div> -->
+					<div id="MainCabinDepartureToolTip" class="is-hidden"
+					    aria-describedby="MainCabinDepartureToolTip" role="tooltip">
+						<h2 class="tooltip-heading">Main Cabin</h2>
+						<div class="tooltip-bullets"></div>
+
+            <button type="button" class="delta text-underline cabin-MainCabin"
+						    id="MainCabinToolTipVisible"
+						    data-behavior="tooltip" data-tooltip-htmlref="#MainCabinDepartureToolTip"
+						    aria-haspopup="dialog" aria-controls="MainCabinDepartureToolTip">
+							First
+							
+							<span class="hidden-accessible">
+								Opens Main Cabin description pop-up
+							</span>
+						</button>
+					</div>
+					<div id="MainCabinDepartureToolTip" class="is-hidden"
+					    aria-describedby="MainCabinDepartureToolTip" role="tooltip">
+						<h2 class="tooltip-heading">First</h2>
+						<div class="tooltip-bullets"></div>
+							
+
+<style>
+	.cabinBenefits.MainCabin ul li.checkmark:before {
+	    content: "\10e049" !important;
+	    color: #008712 !important;
+	}
+	.cabinBenefits.MainCabin ul li.redx:before, .mobile-fare-options .main-cabin-benefits li.redx:before {
+	    content: "\10e04a" !important;
+    	color: #d14904!important;
+	}
+    .fare-header .aa-tooltip .tooltip-content .tooltip-bullets ul li.redx:before {
+        content: "\10e04a" !important;
+      	color: #fff!important;
+    }
+	.footnote {
+        text-indent: -.6em;
+        padding-left: 1em;
+        margin-bottom: 0;
+    }
+
+</style></div></div></div></div></div></div></div>
+
+  <ul class="search-results-normal js-forsort">
+			<li id="slice0Flight1" class="flight-search-results js-moreflights "
+                data-triptime="188"
+                data-tripstops="0"
+                data-departuretime="10-10-2022 05:05:00"
+                data-arrivaltime="10-10-2022 09:13:00"
+                data-tripprice="339.00"
+                data-lowestfare="339.00"
+                data-flightindex="1">
+				<div class="row flight-matrix">
+					<div class="span6">
+						<div class="js-showmorefocus">
+<div class="row-nobreak">
+	<div class="span4 span-phone6">
+		<span class="flight-airport-code">DFW</span>
+	</div>
+	<div class="span4 span-phone5">
+		<span class="flight-airport-code">PHL</span>
+	</div>
+</div>
+
+    <div class="row-noBreak">
+	
+
+<div class="span3 span-phone4">
+	<span class="flight-time gamma aa-strong">
+		5:05
+		<span>AM</span>
+	</span>
+</div>
+<div class="span1 span-phone2">
+	<span aria-hidden="true" class="icon-arrow-right origin-destination-icon"></span>
+</div>
+<div class="span3 span-phone5">
+	<span class="flight-time gamma aa-strong">
+		9:13
+		<span>AM</span>
+	</span>
+</div>
+	<div class="span2 hidden-phone">
+		<div class="flight-duration-stops margin-top -small">
+3h&nbsp;
+8m
+		</div>
+	</div>
+	<div class="span3 hidden-phone">
+		<div class="flight-duration-stops margin-top -small">Nonstop
+      </div>
+	</div>
+</div>
+<div class="row-nobreak visible-phone">
+	<div class="span-phone6">
+         Nonstop
+	</div>
+	<div class="span-phone5">
+
+  3h&nbsp;
+8m
+	</div>
+</div>
+							<div class="flight-details">
+<div class="flight-info">
+    
+	<span class="flight-numbers" >
+		AA  2562
+	</span>
+	<span class="icon-square" aria-hidden="true"></span>
+	<span class="wrapText">
+		321-Airbus A321
+	</span>
+
+  <ul class="link-list">
+	<li><button id="flight0DetailsLink" class="btn-link flight-details-dialog" type="button"
+					data-selectedsliceid="S6X6a05yDRdNlSVW"
+					data-bookingpathstateid="1665288448054-661"
+					data-farefilter="Lowest"
+					data-currentsliceindex="1"
+					data-triptype="oneWay"
+					aria-haspopup="dialog" aria-controls="flightDetailsDialog">
+					<span class="text-underline">Details</span><span class="hidden-accessible">, 
+for DFW to PHL, departing at 5:05 AM  Nonstop 
+</span>
+		</button>
+    </li>
+    
+        <li>
+            <button id="flight0SeatsLink" type="button" class="btn-link seats-detail-dialog"
+                    data-seatslink="/seats/dialog?legs[0].flightNumber=2562&amp;legs[0].departureMonth=10&amp;legs[0].departureDay=10&amp;legs[0].origin=DFW&amp;legs[0].destination=PHL&amp;legs[0].aircraft=321&amp;legs[0].wifi=true&amp;legs[0].highSpeedWifi=false&amp;legs[0].power=true&amp;legs[0].carrier=AA"
+                    aria-haspopup="dialog"
+                    aria-controls="viewAvailableSeatsDialog">
+                <span class="text-underline">Seats</span>
+                <span class="hidden-accessible">,
+for DFW to PHL, departing at 5:05 AM  Nonstop 
+</span>
+            </button>
+        </li></ul></div>
+
+  <div class="span6 fare-selector-row js-fares-container" style="position: absolute;
+  right: 200px;">
+<div class="row-noBreak">
+				<div class="span6" >
+                    <button
+                        id="slice0Flight1MainCabin"
+                        class="fareType_MainCabin fareselector text-center btn-fullWidth"
+                        
+                        data-sliceid="S6X6a05yDRdNlSVW"
+                        data-fareid="4dmV9yj4k02VH4qqgDPqAR001"
+                        data-bookingpathid="1665288448054-661"
+                        data-farefilter="Lowest" data-maxslices="1"
+                        data-currentsliceindex="1"
+                        data-farename="MainCabin"
+
+                        data-acutalfarename="MainCabin"
+                        data-corporaterate="false"
+                        
+
+
+
+	data-fare-showcurrencysymbol="true" 
+	data-fare-currencycode="USD" 
+	data-fare-currencysymbol="&#x24;" 
+	data-fare-amount="339"
+	data-fare-amount-unformatted="339.00" 
+	data-fare-totalamount="338.61"
+	data-fare-styleclass=""
+	data-fare-slice="0"
+	data-fare-triptype="One way"
+
+ tabindex="0">
+								<div class="content" style="margin:0">          
+									<div class="triptype">One way</div>
+									<div class="amount">
+                                        
+                                            <sup class="displaySymbol">
+                                                &#x24;
+                                            </sup>
+                                        
+										<s><span class="price">
+										    339
+										    <span class="hidden-accessible"> ,</span></s>
+										</span>
+										
+                  </div>
+										<div class="seatsLeft">
+										    <span class="hidden-accessible">, </span>
+										    2 seats left<br>
+                      <h4><a href="https://www.aa.com/i18n/aadvantage-program/aadvantage-program.jsp?anchorEvent=false&from=Nav">$170</a></h4>
+                      
+                      <h7>Become an AAdvantage member</h7>
+                    </div>
+                </div>
+						<span class="hidden-accessible">
+						     MainCabin
+for DFW to PHL, departing at 5:05 AM  Nonstop 
+
+						</span>
+					</button>
+        </div>
+				<div class="span6">
+                    <button
+                        id="slice0Flight1First"
+                        class="fareType_First fareselector text-center btn-fullWidth"
+                        
+                        data-sliceid="S6X6a05yDRdNlSVW"
+                        data-fareid="XkmBfSuIx3QLohttOQvZrR001"
+                        data-bookingpathid="1665288448054-661"
+                        data-farefilter="Lowest" data-maxslices="1"
+                        data-currentsliceindex="1"
+                        data-farename="First"
+                        
+                        
+
+                        data-acutalfarename="First"
+                        data-corporaterate="false"
+                        
+
+
+
+	data-fare-showcurrencysymbol="true" 
+	data-fare-currencycode="USD" 
+	data-fare-currencysymbol="&#x24;" 
+	data-fare-amount="754"
+	data-fare-amount-unformatted="754.00" 
+	data-fare-totalamount="753.60" 
+	data-fare-styleclass=""
+	data-fare-slice="0"
+	data-fare-triptype="One way"
+
+ tabindex="0">
+								<div class="content" >                 
+									<div class="triptype">One way</div>
+									<div class="amount">
+                                        
+                                            <sup class="displaySymbol">
+                                                &#x24;
+                                            </sup>
+                                        
+										<s><span class="price">
+										    754
+										    <span class="hidden-accessible"> ,</span></s>
+                    <br>
+                     <h4><a href="https://www.aa.com/i18n/aadvantage-program/aadvantage-program.jsp?anchorEvent=false&from=Nav">$377</a></h4> 
+                    
+<!--                     <h7>Become an AAdvantage member</h7> -->
+                    </span>
+                  </div>
+                </div>
+						<span class="hidden-accessible">
+						     First
+for DFW to PHL, departing at 5:05 AM  Nonstop 
+
+						</span>
+					</button>
+				</div>
+			
+		
+	
+</div>	</div>
+				</div>
+            </li>
+<!--               <br><br><br><br><br><br> -->
+
+              <li id="slice0Flight2" class="flight-search-results js-moreflights "
+                data-triptime="188"
+                data-tripstops="0"
+                data-departuretime="10-10-2022 07:00:00"
+                data-arrivaltime="10-10-2022 11:08:00"
+                data-tripprice="9999999999"
+                data-lowestfare="2272.00"
+                data-flightindex="2">
+				<div class="row flight-matrix">
+					<div class="span6">
+						<div class="js-showmorefocus">
+<div class="row-nobreak">
+	<div class="span4 span-phone6">
+		<span class="flight-airport-code">DFW</span>
+	</div>
+	<div class="span4 span-phone5">
+		<span class="flight-airport-code">PHL</span>
+	</div>
+</div>
+<div class="row-noBreak">
+	
+
+<div class="span3 span-phone4">
+	<span class="flight-time gamma aa-strong">
+		7:00
+		<span>AM</span>
+	</span>
+</div>
+<div class="span1 span-phone2">
+	<span aria-hidden="true" class="icon-arrow-right origin-destination-icon"></span>
+</div>
+<div class="span3 span-phone5">
+	<span class="flight-time gamma aa-strong">
+		11:08
+		<span>AM</span>
+	</span>
+</div>
+	<div class="span2 hidden-phone">
+		<div class="flight-duration-stops margin-top -small">
+3h&nbsp;
+8m
+		</div>
+	</div>
+	<div class="span3 hidden-phone">
+		<div class="flight-duration-stops margin-top -small">
+              Nonstop
+		</div>
+	</div>
+</div>
+<div class="row-nobreak visible-phone">
+	<div class="span-phone6">
+         Nonstop
+	</div>
+	<div class="span-phone5">
+3h&nbsp;
+8m
+	</div>
+</div>
+              <div class="flight-details">
+<div class="flight-info">
+    
+	<span class="flight-numbers" >
+		AA  856
+	</span>
+	<span class="icon-square" aria-hidden="true"></span>
+	<span class="wrapText">
+		321-Airbus A321
+	</span></div></div></div></div>
+        </div></li></div></div>
+  
+  <ul class="link-list">
+	<li><button id="flight1DetailsLink" class="btn-link flight-details-dialog" type="button"
+					data-selectedsliceid="SDrhytNlVay8-7vu"
+					data-bookingpathstateid="1665288448054-661"
+					data-farefilter="Lowest"
+					data-currentsliceindex="1"
+					data-triptype="oneWay"
+					aria-haspopup="dialog" aria-controls="flightDetailsDialog">
+					<span class="text-underline">Details</span><span class="hidden-accessible">,
+for DFW to PHL, departing at 7:00 AM  Nonstop 
+</span>
+		</button>
+  </li>
+        <li>
+            <button id="flight1SeatsLink" type="button" class="btn-link seats-detail-dialog"
+                    data-seatslink="/seats/dialog?legs[0].flightNumber=856&amp;legs[0].departureMonth=10&amp;legs[0].departureDay=10&amp;legs[0].origin=DFW&amp;legs[0].destination=PHL&amp;legs[0].aircraft=321&amp;legs[0].wifi=true&amp;legs[0].highSpeedWifi=false&amp;legs[0].power=true&amp;legs[0].carrier=AA"
+                    aria-haspopup="dialog"
+                    aria-controls="viewAvailableSeatsDialog">
+                <span class="text-underline">Seats</span>
+                <span class="hidden-accessible">,
+for DFW to PHL, departing at 7:00 AM  Nonstop 
+</span>
+            </button>
+        </li></ul></div>
+
+  <div class="span6 fare-selector-row js-fares-container" style="position: absolute;
+  right: 150px;>
+<div class="row-noBreak">
+				<div class="span6">
+					<div id="slice0Flight2MainCabin" class="not-available text-center">
+						<span class="hidden-accessible">Main Cabin</span>
+						Not available
+						<span class="hidden-accessible">
+for DFW to PHL, departing at 7:00 AM  Nonstop 
+
+						</span>
+					</div>
+				</div>
+
+  <div class="span6">
+                    <button
+                        id="slice0Flight2First"
+                        class="fareType_First fareselector text-center btn-fullWidth"
+                        
+                        data-sliceid="SDrhytNlVay8-7vu"
+                        data-fareid="XkmBfSuIx3QLohttOQvZrR004"
+                        data-bookingpathid="1665288448054-661"
+                        data-farefilter="Lowest" data-maxslices="1"
+                        data-currentsliceindex="1"
+                        data-farename="First"
+                        
+                        
+
+                        data-acutalfarename="First"
+                        data-corporaterate="false"
+                        
+	data-fare-showcurrencysymbol="true" 
+	data-fare-currencycode="USD" 
+	data-fare-currencysymbol="&#x24;" 
+	data-fare-amount="2,272"
+	data-fare-amount-unformatted="2272.00" 
+	data-fare-totalamount="2,271.59" 
+	data-fare-styleclass=""
+	data-fare-slice="0"
+	data-fare-triptype="One way"
+
+ tabindex="0">
+      <div class="content">                
+									<div class="triptype">One way</div>
+									<div class="amount">
+                                        
+                                            <sup class="displaySymbol">
+                                                &#x24;
+                                            </sup>
+                                        
+										<span class="price">
+										    2,272
+										    <span class="hidden-accessible"> ,</span>
+                    </span>
+                  </div></div>
+										<div class="seatsLeft">
+										    <span class="hidden-accessible">, </span>
+										    3 seats left
+                                        </div>
+									
+									
+								</div>
+						<span class="hidden-accessible">
+						     First
+							
+for DFW to PHL, departing at 7:00 AM  Nonstop 
+
+						</span>
+					</button>
+  </div>
+</div>
+					</div>
+				</div>
+			</li>
+
+    <li id="slice0Flight3" class="flight-search-results js-moreflights "
+                data-triptime="189"
+                data-tripstops="0"
+                data-departuretime="10-10-2022 08:45:00"
+                data-arrivaltime="10-10-2022 12:54:00"
+                data-tripprice="9999999999"
+                data-lowestfare="2272.00"
+                data-flightindex="3">
+				<div class="row flight-matrix">
+					<div class="span6">
+						<div class="js-showmorefocus">
+<div class="row-nobreak">
+	<div class="span4 span-phone6">
+		<span class="flight-airport-code">DFW</span>
+	</div>
+	<div class="span4 span-phone5">
+		<span class="flight-airport-code">PHL</span>
+	</div>
+</div>
+<div class="row-noBreak">
+	
+
+<div class="span3 span-phone4">
+	<span class="flight-time gamma aa-strong">
+		8:45
+		<span>AM</span>
+	</span>
+</div>
+<div class="span1 span-phone2">
+	<span aria-hidden="true" class="icon-arrow-right origin-destination-icon"></span>
+</div>
+<div class="span3 span-phone5">
+	<span class="flight-time gamma aa-strong">
+		12:54
+		<span>PM</span>
+	</span>
+</div>
+	<div class="span2 hidden-phone">
+		<div class="flight-duration-stops margin-top -small">
+3h&nbsp;
+9m
+		</div>
+	</div>
+	<div class="span3 hidden-phone">
+		<div class="flight-duration-stops margin-top -small">
+         Nonstop
+      </div>
+	</div>
+</div>
+<div class="row-nobreak visible-phone">
+	<div class="span-phone6">
+         Nonstop
+	</div>
+	<div class="span-phone5">
+
+3h&nbsp;
+9m
+	</div>
+</div>
+
+  <div class="flight-details">
+    <div class="flight-info">
+    
+	<span class="flight-numbers" >
+		AA  402
+	</span>
+	<span class="icon-square" aria-hidden="true"></span>
+	<span class="wrapText">
+		321-Airbus A321
+	</span>
+
+      <ul class="link-list">
+	<li><button id="flight2DetailsLink" class="btn-link flight-details-dialog" type="button"
+					data-selectedsliceid="SlooLX4NqsMHp06T"
+					data-bookingpathstateid="1665288448054-661"
+					data-farefilter="Lowest"
+					data-currentsliceindex="1"
+					data-triptype="oneWay"
+					aria-haspopup="dialog" aria-controls="flightDetailsDialog">
+					<span class="text-underline">Details</span><span class="hidden-accessible">,
+for DFW to PHL, departing at 8:45 AM  Nonstop 
+</span>
+		</button>
+  </li>
+        <li>
+            <button id="flight2SeatsLink" type="button" class="btn-link seats-detail-dialog"
+                    data-seatslink="/seats/dialog?legs[0].flightNumber=402&amp;legs[0].departureMonth=10&amp;legs[0].departureDay=10&amp;legs[0].origin=DFW&amp;legs[0].destination=PHL&amp;legs[0].aircraft=321&amp;legs[0].wifi=true&amp;legs[0].highSpeedWifi=false&amp;legs[0].power=true&amp;legs[0].carrier=AA"
+                    aria-haspopup="dialog"
+                    aria-controls="viewAvailableSeatsDialog">
+                <span class="text-underline">Seats</span>
+                <span class="hidden-accessible">, 
+for DFW to PHL, departing at 8:45 AM  Nonstop 
+</span>
+            </button>
+        </li></ul></div>
+
+    <div class="span6 fare-selector-row js-fares-container" style="position: absolute;
+  right: 150px;>
+<div class="row-noBreak">	
+				<div class="span6">
+					<div id="slice0Flight3MainCabin" class="not-available text-center">
+						<span class="hidden-accessible">Main Cabin</span>
+						Not available
+						<span class="hidden-accessible">
+for DFW to PHL, departing at 8:45 AM  Nonstop 
+
+						</span>
+					</div>
+				</div>
+
+  <div class="span6">
+                    <button
+                        id="slice0Flight3First"
+                        class="fareType_First fareselector text-center btn-fullWidth"
+                        
+                        data-sliceid="SlooLX4NqsMHp06T"
+                        data-fareid="XkmBfSuIx3QLohttOQvZrR005"
+                        data-bookingpathid="1665288448054-661"
+                        data-farefilter="Lowest" data-maxslices="1"
+                        data-currentsliceindex="1"
+                        data-farename="First"
+                        
+                        
+
+                        data-acutalfarename="First"
+                        data-corporaterate="false"
+                        
+
+	data-fare-showcurrencysymbol="true" 
+	data-fare-currencycode="USD" 
+	data-fare-currencysymbol="&#x24;" 
+	data-fare-amount="2,272"
+	data-fare-amount-unformatted="2272.00" 
+	data-fare-totalamount="2,271.59" 
+	data-fare-styleclass=""
+	data-fare-slice="0"
+	data-fare-triptype="One way"
+
+ tabindex="0">
+								<div class="content">
+    <div class="triptype">One way</div>
+									<div class="amount">
+                                        
+                                            <sup class="displaySymbol">
+                                                &#x24;
+                                            </sup>
+                                        
+										<span class="price">
+										    2,272
+										    <span class="hidden-accessible"> ,</span>
+										</span>
+										
+                  </div>
+										<div class="seatsLeft">
+										    <span class="hidden-accessible">, </span>
+										    3 seats left
+                                        </div>
+									
+									
+								</div>
+							
+						
+						<span class="hidden-accessible">
+						     First
+for DFW to PHL, departing at 8:45 AM  Nonstop 
+
+						</span>
+					</button>
+  </div>	
+</div></div></div></div></div></div></li>
+</body>
+
+</html>
